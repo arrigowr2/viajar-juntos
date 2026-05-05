@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Calendar, MapPin, Edit2, LogOut, ArrowLeft, MessageCircle, Users } from 'lucide-react';
+import { Mail, MapPin, Edit2, LogOut, ArrowLeft, MessageCircle, Users } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Profile = ({ user }) => {

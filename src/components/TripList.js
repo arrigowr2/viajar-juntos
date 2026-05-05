@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MapPin, Calendar, Users, Search, Filter, ArrowLeft, MessageCircle } from 'lucide-react';
+import { MapPin, Calendar, Users, Search, Filter, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';

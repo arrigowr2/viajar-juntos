@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { MapPin, Calendar, Users, ArrowLeft, MessageCircle, Check, X, Heart, Share2 } from 'lucide-react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { format } from 'date-fns';
