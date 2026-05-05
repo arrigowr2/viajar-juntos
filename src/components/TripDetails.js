@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Calendar, Users, Tag, ArrowLeft, MessageCircle, Check, X, Heart, Share2 } from 'lucide-react';
+import { MapPin, Calendar, Users, ArrowLeft, MessageCircle, Check, X, Heart, Share2 } from 'lucide-react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
@@ -7,7 +7,6 @@ import { ptBR } from 'date-fns/locale';
 const TripDetails = ({ trips, user, onJoinTrip, onLeaveTrip, onAcceptInterested }) => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [showAllInterested, setShowAllInterested] = useState(false);
 
   const trip = trips.find(t => t.id === parseInt(id));
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { User, MapPin, Calendar, MessageCircle, Home, PlusCircle, Search, UserCircle } from 'lucide-react';
+import { MapPin, Home, PlusCircle, Search, UserCircle } from 'lucide-react';
 import Login from './components/Login';
 import Register from './components/Register';
 import Dashboard from './components/Dashboard';
@@ -154,12 +154,12 @@ function App() {
     }));
   };
 
-  const cleanExpiredTrips = () => {
-    const today = new Date();
-    setTrips(trips.filter(trip => new Date(trip.date) >= today));
-  };
-
   useEffect(() => {
+    const cleanExpiredTrips = () => {
+      const today = new Date();
+      setTrips(prevTrips => prevTrips.filter(trip => new Date(trip.date) >= today));
+    };
+    
     cleanExpiredTrips();
     const interval = setInterval(cleanExpiredTrips, 60000);
     return () => clearInterval(interval);
