@@ -167,7 +167,7 @@ function App() {
 
   if (!user) {
     return (
-      <Router>
+      <Router basename="/viajar-juntos">
         <Routes>
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
           <Route path="/register" element={<Register onLogin={handleLogin} />} />
